@@ -9,12 +9,28 @@
 
 <h1>PDF & Image converter tool</h1>
 
-<form>
-    <input type="file">
-    <br><br>
-    <input type="number" placeholder="Width">
-    <input type="number" placeholder="Height">
-    <button type="sumbit">Upload</button>
+<form action="/resize" method="post" enctype="multipart/form-data">
+
+    <label>Upload Image:</label><br>
+    <input type="file" name="image"><br><br>
+
+    <label>Width:</label><br>
+    <input type="number" name="width"><br><br>
+
+    <label>Height:</label><br>
+    <input type="number" name="height"><br><br>
+
+    <label>Enter Target Size:</label><br>
+    <input type="number" name="size_kb"><br><br>
+
+    <label>Choose Unit:</label><br>
+    <select name="size_unit">
+        <option value="kb">KB</option>
+        <option value="mb">MB</option>
+    </select><br><br>
+
+    <button type="submit">Upload</button>
+
 </form>
 
 </body>
